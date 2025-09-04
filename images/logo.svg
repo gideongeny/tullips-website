@@ -1,0 +1,52 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .logo-text { font-family: 'Georgia', serif; font-weight: bold; }
+      .subtitle-text { font-family: 'Arial', sans-serif; font-weight: normal; }
+    </style>
+  </defs>
+  
+  <!-- Background circle for the floral wreath -->
+  <circle cx="150" cy="80" r="60" fill="none" stroke="#2e7d32" stroke-width="2"/>
+  
+  <!-- Central tulip flower -->
+  <g transform="translate(150, 80)">
+    <!-- Tulip petals -->
+    <path d="M-8,-15 Q-12,-25 -8,-35 Q-4,-25 -8,-15 Z" fill="#2e7d32"/>
+    <path d="M8,-15 Q12,-25 8,-35 Q4,-25 8,-15 Z" fill="#2e7d32"/>
+    <path d="M-4,-15 Q0,-25 4,-15 Q0,-5 -4,-15 Z" fill="#2e7d32"/>
+    <path d="M-6,-20 Q-2,-30 2,-20 Q-2,-10 -6,-20 Z" fill="#2e7d32"/>
+    <path d="M6,-20 Q2,-30 -2,-20 Q2,-10 6,-20 Z" fill="#2e7d32"/>
+    
+    <!-- Tulip stem -->
+    <line x1="0" y1="-15" x2="0" y2="15" stroke="#2e7d32" stroke-width="3"/>
+    
+    <!-- Tulip leaves -->
+    <path d="M0,5 Q-15,10 -20,25 Q-15,15 0,5 Z" fill="#2e7d32"/>
+    <path d="M0,5 Q15,10 20,25 Q15,15 0,5 Z" fill="#2e7d32"/>
+  </g>
+  
+  <!-- Wreath branches -->
+  <g transform="translate(150, 80)">
+    <!-- Left branches -->
+    <path d="M-60,0 Q-70,-20 -65,-40 Q-55,-20 -60,0 Z" fill="#2e7d32"/>
+    <path d="M-55,-10 Q-65,-30 -60,-50 Q-50,-30 -55,-10 Z" fill="#2e7d32"/>
+    
+    <!-- Right branches -->
+    <path d="M60,0 Q70,-20 65,-40 Q55,-20 60,0 Z" fill="#2e7d32"/>
+    <path d="M55,-10 Q65,-30 60,-50 Q50,-30 55,-10 Z" fill="#2e7d32"/>
+    
+    <!-- Small leaves on branches -->
+    <ellipse cx="-70" cy="-30" rx="3" ry="8" fill="#2e7d32" transform="rotate(-30 -70 -30)"/>
+    <ellipse cx="-65" cy="-45" rx="3" ry="8" fill="#2e7d32" transform="rotate(20 -65 -45)"/>
+    <ellipse cx="70" cy="-30" rx="3" ry="8" fill="#2e7d32" transform="rotate(30 70 -30)"/>
+    <ellipse cx="65" cy="-45" rx="3" ry="8" fill="#2e7d32" transform="rotate(-20 65 -45)"/>
+  </g>
+  
+  <!-- TULLIPS text -->
+  <text x="150" y="160" text-anchor="middle" class="logo-text" font-size="24" fill="#2e7d32">TULLIPS</text>
+  
+  <!-- CREATIVE GREEN SPACES text -->
+  <text x="150" y="180" text-anchor="middle" class="subtitle-text" font-size="12" fill="#2e7d32">CREATIVE GREEN SPACES</text>
+</svg>
+
