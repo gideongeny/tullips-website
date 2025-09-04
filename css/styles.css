@@ -116,7 +116,8 @@ section {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(27, 94, 32, 0.8)), url('images/shop-background.jpg');
+    background: #2e7d32;
+    background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(27, 94, 32, 0.8)), url('images/photos/IMG-20250901-WA0018.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
