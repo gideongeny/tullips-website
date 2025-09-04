@@ -38,11 +38,12 @@ header {
 }
 
 .logo {
-    height: 80px;
+    height: 100px;
     width: auto;
     transition: transform 0.3s ease;
     display: block;
     max-width: 100%;
+    filter: none;
 }
 
 .logo:hover {
@@ -114,7 +115,10 @@ section {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+    background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(27, 94, 32, 0.8)), url('images/shop-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: white;
     text-align: center;
     padding: 6rem 2rem;
@@ -1116,7 +1120,7 @@ img.loaded {
     }
     
     .logo {
-        height: 70px;
+        height: 80px;
     }
 }
 
