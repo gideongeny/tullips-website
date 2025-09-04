@@ -1103,13 +1103,20 @@ img.loaded {
         text-align: center;
     }
     
-    header nav {
+    .header-content {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
+    }
+    
+    header nav {
+        flex-direction: row;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .logo {
-        height: 60px;
+        height: 70px;
     }
 }
 
