@@ -1083,7 +1083,7 @@ img.loaded {
     color: #a5d6a7;
 }
 
-/* Mobile Logo - Same SVG with mobile styling */
+/* Mobile Logo - Clean logo only */
 @media (max-width: 768px) {
     .logo {
         height: 70px !important;
@@ -1099,12 +1099,9 @@ img.loaded {
         display: flex !important;
         align-items: center !important;
         justify-content: flex-start !important;
-        padding: 8px !important;
-        background: rgba(255,255,255,0.1) !important;
-        border-radius: 8px !important;
-        border: 1px solid rgba(255,255,255,0.2) !important;
-        min-width: 120px !important;
-        min-height: 60px !important;
+        padding: 5px !important;
+        min-width: 80px !important;
+        min-height: 50px !important;
     }
 }
 
@@ -1149,6 +1146,17 @@ img.loaded {
         transition: left 0.3s ease;
         z-index: 999;
         box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+    
+    header nav::before {
+        content: "Home";
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
     
     header nav.active {
@@ -1244,9 +1252,9 @@ img.loaded {
     }
     
     .logo-container {
-        min-width: 100px !important;
-        min-height: 50px !important;
-        padding: 6px !important;
+        min-width: 70px !important;
+        min-height: 40px !important;
+        padding: 4px !important;
     }
     
     .mobile-menu-toggle {
