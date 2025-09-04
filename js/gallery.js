@@ -53,12 +53,27 @@ class SimplePhotoGallery {
         const endIndex = startIndex + this.photosPerPage;
         const photosToShow = this.allPhotos.slice(startIndex, endIndex);
         
+        console.log('Rendering photos:', {
+            currentPage: this.currentPage,
+            startIndex: startIndex,
+            endIndex: endIndex,
+            photosToShow: photosToShow.length,
+            totalPhotos: this.allPhotos.length
+        });
+        
         photosToShow.forEach(photo => {
             const photoElement = this.createPhotoElement(photo);
             this.gallery.appendChild(photoElement);
         });
         
         this.updateLoadMoreButton();
+    }
+    
+    loadMorePhotos() {
+        console.log('Loading more photos...', 'Current page:', this.currentPage);
+        this.currentPage++;
+        this.renderPhotos();
+        console.log('Photos loaded. Current page:', this.currentPage);
     }
     
     createPhotoElement(photo) {
@@ -221,8 +236,7 @@ class SimplePhotoGallery {
     
     setupEventListeners() {
         this.loadMoreBtn.addEventListener('click', () => {
-            this.currentPage++;
-            this.renderPhotos();
+            this.loadMorePhotos();
         });
     }
     
