@@ -34,7 +34,7 @@ class SimplePhotoGallery {
     getPhotosFromFolder() {
         // Simulate reading photos from the folder
         const photos = [];
-        const photoCount = 95; // Total number of photos (18-117, missing some numbers)
+        const photoCount = 94; // Total number of photos (18-117, missing some numbers)
         
         // Create array of actual photo numbers based on your files
         const photoNumbers = [
