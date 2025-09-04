@@ -30,6 +30,7 @@ header {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 2rem;
 }
 
 .logo-container {
@@ -43,7 +44,7 @@ header {
     transition: transform 0.3s ease;
     display: block;
     max-width: 100%;
-    filter: none;
+    filter: brightness(0) invert(1);
 }
 
 .logo:hover {
@@ -115,15 +116,16 @@ section {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(27, 94, 32, 0.8)), url('images/shop-background.jpg');
+    background: linear-gradient(rgba(46, 125, 50, 0.7), rgba(27, 94, 32, 0.7)), url('images/shop-background.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
     padding: 6rem 2rem;
     position: relative;
     overflow: hidden;
+    min-height: 80vh;
 }
 
 .hero-section::before {
