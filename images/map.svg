@@ -1,0 +1,48 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f0f0f0"/>
+  
+  <!-- Road -->
+  <rect x="50" y="120" width="300" height="60" fill="#e0e0e0" rx="5"/>
+  <rect x="50" y="130" width="300" height="40" fill="#d0d0d0" rx="3"/>
+  
+  <!-- Road markings -->
+  <rect x="60" y="145" width="20" height="3" fill="#fff"/>
+  <rect x="90" y="145" width="20" height="3" fill="#fff"/>
+  <rect x="120" y="145" width="20" height="3" fill="#fff"/>
+  <rect x="150" y="145" width="20" height="3" fill="#fff"/>
+  <rect x="180" y="145" width="20" height="3" fill="#fff"/>
+  <rect x="210" y="145" width="20" height="3" fill="#fff"/>
+  <rect x="240" y="145" width="20" height="3" fill="#fff"/>
+  <rect x="270" y="145" width="20" height="3" fill="#fff"/>
+  <rect x="300" y="145" width="20" height="3" fill="#fff"/>
+  <rect x="330" y="145" width="20" height="3" fill="#fff"/>
+  
+  <!-- Location pin -->
+  <circle cx="200" cy="150" r="8" fill="#f44336"/>
+  <circle cx="200" cy="150" r="12" fill="rgba(244, 67, 54, 0.3)"/>
+  
+  <!-- Pin icon -->
+  <svg x="192" y="142" width="16" height="16" viewBox="0 0 24 24" fill="#fff">
+    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+  </svg>
+  
+  <!-- Labels -->
+  <text x="200" y="180" text-anchor="middle" fill="#333" font-family="Arial" font-size="14" font-weight="bold">Nairobi Road</text>
+  <text x="200" y="200" text-anchor="middle" fill="#333" font-family="Arial" font-size="12">Kisumu–Busia Road</text>
+  <text x="200" y="220" text-anchor="middle" fill="#333" font-family="Arial" font-size="12">Kericho</text>
+  
+  <!-- Business label -->
+  <rect x="150" y="100" width="100" height="25" fill="rgba(46, 125, 50, 0.9)" rx="12"/>
+  <text x="200" y="117" text-anchor="middle" fill="#fff" font-family="Arial" font-size="11" font-weight="bold">Tullips Creative</text>
+  
+  <!-- Arrow pointing to location -->
+  <path d="M200 125 L200 142" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32"/>
+    </marker>
+  </defs>
+</svg>
