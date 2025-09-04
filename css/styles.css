@@ -36,6 +36,8 @@ header {
     width: auto;
     filter: brightness(0) invert(1);
     transition: transform 0.3s ease;
+    display: block;
+    max-width: 100%;
 }
 
 .logo:hover {
@@ -542,11 +544,35 @@ section {
     align-items: center;
     gap: 1rem;
     margin-bottom: 2rem;
+    padding: 15px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 
 .contact-icon {
-    font-size: 2rem;
+    width: 24px;
+    height: 24px;
+    color: #2e7d32;
     flex-shrink: 0;
+}
+
+.contact-link {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #1b5e20;
+    text-decoration: underline;
 }
 
 .contact-item h4 {
@@ -554,11 +580,7 @@ section {
     margin-bottom: 0.25rem;
 }
 
-.contact-form {
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 15px;
-}
+
 
 /* Footer */
 footer {
@@ -716,7 +738,8 @@ footer {
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/2;
+    background: #f8f9fa;
 }
 
 .photo-image {
