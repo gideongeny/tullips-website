@@ -117,7 +117,7 @@ section {
 /* Hero Section */
 .hero-section {
     background: #2e7d32;
-    background: linear-gradient(rgba(46, 125, 50, 0.7), rgba(27, 94, 32, 0.7)), url('images/shop-background.jpg');
+    background: linear-gradient(rgba(46, 125, 50, 0.7), rgba(27, 94, 32, 0.7)), url('../images/shop-background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
