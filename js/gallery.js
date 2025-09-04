@@ -178,6 +178,11 @@ class SimplePhotoGallery {
         document.body.appendChild(lightbox);
         document.body.style.overflow = 'hidden';
         
+        // Trigger animation
+        setTimeout(() => {
+            lightbox.classList.add('show');
+        }, 10);
+        
         // Close lightbox
         const closeBtn = lightbox.querySelector('.lightbox-close');
         closeBtn.addEventListener('click', () => this.closeLightbox(lightbox));
@@ -189,11 +194,13 @@ class SimplePhotoGallery {
         });
         
         // ESC key to close
-        document.addEventListener('keydown', (e) => {
+        const escapeHandler = (e) => {
             if (e.key === 'Escape') {
                 this.closeLightbox(lightbox);
+                document.removeEventListener('keydown', escapeHandler);
             }
-        });
+        };
+        document.addEventListener('keydown', escapeHandler);
     }
     
     closeLightbox(lightbox) {
@@ -248,7 +255,47 @@ class SimplePhotoGallery {
     }
 }
 
-// Initialize gallery when DOM is loaded
+// Mobile Menu Functionality
+class MobileMenu {
+    constructor() {
+        this.menuToggle = document.getElementById('mobileMenuToggle');
+        this.nav = document.getElementById('mainNav');
+        this.init();
+    }
+    
+    init() {
+        if (this.menuToggle && this.nav) {
+            this.menuToggle.addEventListener('click', () => this.toggleMenu());
+            
+            // Close menu when clicking on nav links
+            const navLinks = this.nav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => this.closeMenu());
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!this.nav.contains(e.target) && !this.menuToggle.contains(e.target)) {
+                    this.closeMenu();
+                }
+            });
+        }
+    }
+    
+    toggleMenu() {
+        this.nav.classList.toggle('active');
+        const isOpen = this.nav.classList.contains('active');
+        this.menuToggle.innerHTML = isOpen ? '✕' : '☰';
+    }
+    
+    closeMenu() {
+        this.nav.classList.remove('active');
+        this.menuToggle.innerHTML = '☰';
+    }
+}
+
+// Initialize gallery and mobile menu when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     new SimplePhotoGallery();
+    new MobileMenu();
 });
