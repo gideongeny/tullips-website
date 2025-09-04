@@ -1,7 +1,7 @@
 // Simple Photo Gallery - All Photos in One Gallery
 class SimplePhotoGallery {
     constructor() {
-        this.gallery = document.getElementById('photoGallery');
+        this.gallery = document.getElementById('gallery-grid');
         this.loadMoreBtn = document.getElementById('loadMoreBtn');
         this.photosPerPage = 12;
         this.currentPage = 0;
@@ -24,17 +24,26 @@ class SimplePhotoGallery {
     getPhotosFromFolder() {
         // Simulate reading photos from the folder
         const photos = [];
-        const photoCount = 80; // Total number of photos
+        const photoCount = 95; // Total number of photos (18-117, missing some numbers)
         
-        for (let i = 1; i <= photoCount; i++) {
-            const photoNumber = i.toString().padStart(2, '0');
+        // Create array of actual photo numbers based on your files
+        const photoNumbers = [
+            18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 36, 37, 38, 39, 40,
+            41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
+            61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
+            81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100,
+            101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 114, 115, 116, 117
+        ];
+        
+        photoNumbers.forEach((num, index) => {
+            const photoNumber = num.toString().padStart(4, '0');
             photos.push({
-                id: i,
-                src: `images/photos/IMG-20250901-WA${photoNumber.padStart(4, '0')}.jpg`,
-                alt: `Tullips Creative Green Spaces - Photo ${i}`,
-                title: `Beautiful Creation ${i}`
+                id: index + 1,
+                src: `images/photos/IMG-20250901-WA${photoNumber}.jpg`,
+                alt: `Tullips Creative Green Spaces - Photo ${index + 1}`,
+                title: `Beautiful Creation ${index + 1}`
             });
-        }
+        });
         
         return photos;
     }
