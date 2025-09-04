@@ -47,16 +47,6 @@ header {
     filter: brightness(0) invert(1) drop-shadow(0 0 3px rgba(255,255,255,0.8));
 }
 
-.desktop-logo {
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .desktop-logo {
-        display: none;
-    }
-}
-
 .logo:hover {
     transform: scale(1.05);
 }
@@ -1093,35 +1083,28 @@ img.loaded {
     color: #a5d6a7;
 }
 
-/* Mobile Logo - Simple Text Approach */
-.mobile-logo-text {
-    display: none;
-}
-
+/* Mobile Logo - Same SVG with mobile styling */
 @media (max-width: 768px) {
-    .mobile-logo-text {
+    .logo {
+        height: 70px !important;
+        width: auto !important;
+        max-width: 150px !important;
         display: block !important;
-        color: white !important;
-        font-weight: bold !important;
-        font-size: 24px !important;
-        text-align: center !important;
-        background: rgba(255,255,255,0.2) !important;
-        padding: 10px 15px !important;
-        border-radius: 8px !important;
-        border: 2px solid rgba(255,255,255,0.5) !important;
-        min-width: 100px !important;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
-    }
-    
-    .desktop-logo {
-        display: none !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255,255,255,0.9)) !important;
     }
     
     .logo-container {
         display: flex !important;
         align-items: center !important;
         justify-content: flex-start !important;
-        padding: 5px !important;
+        padding: 8px !important;
+        background: rgba(255,255,255,0.1) !important;
+        border-radius: 8px !important;
+        border: 1px solid rgba(255,255,255,0.2) !important;
+        min-width: 120px !important;
+        min-height: 60px !important;
     }
 }
 
@@ -1255,7 +1238,16 @@ img.loaded {
         padding: 0.5rem 1rem;
     }
     
-    /* Logo styles moved to dedicated mobile section above */
+    .logo {
+        height: 60px !important;
+        max-width: 120px !important;
+    }
+    
+    .logo-container {
+        min-width: 100px !important;
+        min-height: 50px !important;
+        padding: 6px !important;
+    }
     
     .mobile-menu-toggle {
         font-size: 20px;
