@@ -1089,11 +1089,26 @@ img.loaded {
         display: block;
     }
     
+    header {
+        position: relative;
+        z-index: 1000;
+        background: #2e7d32;
+    }
+    
     .header-content {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         gap: 1rem;
+        padding: 1rem;
+        position: relative;
+        z-index: 1001;
+    }
+    
+    .logo-container {
+        display: flex;
+        align-items: center;
+        z-index: 1002;
     }
     
     header nav {
@@ -1172,6 +1187,10 @@ img.loaded {
     
     .logo {
         height: 80px;
+        width: auto;
+        max-width: 200px;
+        display: block;
+        filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.8));
     }
 }
 
@@ -1195,5 +1214,19 @@ img.loaded {
     .service-card,
     .testimonial-card {
         padding: 1.5rem;
+    }
+    
+    .header-content {
+        padding: 0.5rem 1rem;
+    }
+    
+    .logo {
+        height: 60px;
+        max-width: 150px;
+    }
+    
+    .mobile-menu-toggle {
+        font-size: 20px;
+        padding: 8px;
     }
 }
