@@ -501,6 +501,7 @@ section {
     display: block;
     background: #f0f0f0;
     border: 2px dashed #ccc;
+    border-radius: 15px;
 }
 
 .map-image:not([src]), .map-image[src=""] {
