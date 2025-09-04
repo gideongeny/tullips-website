@@ -117,11 +117,11 @@ section {
 /* Hero Section */
 .hero-section {
     background: #2e7d32;
-    background: linear-gradient(rgba(46, 125, 50, 0.7), rgba(27, 94, 32, 0.7)), url('../images/shop-background.jpg');
+    background-image: linear-gradient(rgba(46, 125, 50, 0.7), rgba(27, 94, 32, 0.7)), url('../images/shop-background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     color: white;
     text-align: center;
     padding: 6rem 2rem;
@@ -498,10 +498,8 @@ section {
 .map-image {
     width: 100%;
     height: 300px;
-    object-fit: cover;
     display: block;
-    background: #f0f0f0;
-    border: 2px dashed #ccc;
+    border: none;
     border-radius: 15px;
 }
 
