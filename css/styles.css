@@ -1083,6 +1083,46 @@ img.loaded {
     color: #a5d6a7;
 }
 
+/* Mobile Logo - Force visibility */
+@media (max-width: 768px) {
+    .logo {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: 60px !important;
+        width: auto !important;
+        max-width: 150px !important;
+        filter: none !important;
+        background: white !important;
+        padding: 5px !important;
+        border-radius: 5px !important;
+    }
+    
+    .logo-container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: rgba(255,255,255,0.2) !important;
+        padding: 10px !important;
+        border-radius: 8px !important;
+        min-width: 120px !important;
+        min-height: 70px !important;
+        border: 2px solid rgba(255,255,255,0.3) !important;
+    }
+    
+    .text-logo {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        color: white !important;
+        font-weight: bold !important;
+        font-size: 20px !important;
+        text-align: center !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .mobile-menu-toggle {
@@ -1108,16 +1148,7 @@ img.loaded {
         z-index: 1001;
     }
     
-    .logo-container {
-        display: flex !important;
-        align-items: center !important;
-        z-index: 1002 !important;
-        background: rgba(255,255,255,0.1) !important;
-        padding: 5px !important;
-        border-radius: 5px !important;
-        min-width: 100px !important;
-        min-height: 60px !important;
-    }
+    /* Logo styles moved to dedicated mobile section above */
     
     header nav {
         position: fixed;
@@ -1193,15 +1224,7 @@ img.loaded {
         text-align: center;
     }
     
-    .logo {
-        height: 80px !important;
-        width: auto !important;
-        max-width: 200px !important;
-        display: block !important;
-        filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.8)) !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
+    /* Logo styles moved to dedicated mobile section above */
 }
 
 @media (max-width: 480px) {
@@ -1230,15 +1253,7 @@ img.loaded {
         padding: 0.5rem 1rem;
     }
     
-    .logo {
-        height: 60px !important;
-        max-width: 150px !important;
-        width: auto !important;
-        display: block !important;
-        filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.8)) !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
+    /* Logo styles moved to dedicated mobile section above */
     
     .mobile-menu-toggle {
         font-size: 20px;
