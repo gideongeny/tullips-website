@@ -7,6 +7,16 @@ class SimplePhotoGallery {
         this.currentPage = 0;
         this.allPhotos = [];
         
+        if (!this.gallery) {
+            console.error('Gallery element not found!');
+            return;
+        }
+        
+        if (!this.loadMoreBtn) {
+            console.error('Load More button not found!');
+            return;
+        }
+        
         this.init();
     }
     
@@ -53,14 +63,6 @@ class SimplePhotoGallery {
         const endIndex = startIndex + this.photosPerPage;
         const photosToShow = this.allPhotos.slice(startIndex, endIndex);
         
-        console.log('Rendering photos:', {
-            currentPage: this.currentPage,
-            startIndex: startIndex,
-            endIndex: endIndex,
-            photosToShow: photosToShow.length,
-            totalPhotos: this.allPhotos.length
-        });
-        
         photosToShow.forEach(photo => {
             const photoElement = this.createPhotoElement(photo);
             this.gallery.appendChild(photoElement);
@@ -70,10 +72,8 @@ class SimplePhotoGallery {
     }
     
     loadMorePhotos() {
-        console.log('Loading more photos...', 'Current page:', this.currentPage);
         this.currentPage++;
         this.renderPhotos();
-        console.log('Photos loaded. Current page:', this.currentPage);
     }
     
     createPhotoElement(photo) {
@@ -235,9 +235,14 @@ class SimplePhotoGallery {
     }
     
     setupEventListeners() {
-        this.loadMoreBtn.addEventListener('click', () => {
-            this.loadMorePhotos();
-        });
+        if (this.loadMoreBtn) {
+            this.loadMoreBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.loadMorePhotos();
+            });
+        } else {
+            console.error('Load More button not found!');
+        }
     }
     
     showNotification(message, type = 'info') {
