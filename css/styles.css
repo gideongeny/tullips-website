@@ -44,6 +44,7 @@ header {
     top: 0;
     z-index: 100;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    overflow: hidden; /* contain shine sweep */
 }
 
 /* Header shine sweep across entire header (including nav) */
@@ -59,6 +60,7 @@ header::after {
     pointer-events: none;
     filter: blur(2px);
     animation: headerShine 6s ease-in-out infinite;
+    z-index: 101;
 }
 
 @keyframes headerShine {
@@ -169,6 +171,9 @@ section {
     overflow: hidden;
     min-height: 80vh;
 }
+
+/* Force CSS background hero; hide media wrapper if interfering */
+.hero-media { display: none; }
 
 .hero-section::before {
     content: '';
