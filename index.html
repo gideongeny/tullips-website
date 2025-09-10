@@ -12,27 +12,95 @@
     <meta property="og:title" content="Tullips Creative Green Spaces - Professional Landscaping & Garden Design">
     <meta property="og:description" content="Transform your space with Tullips Creative Green Spaces. Professional landscaping, fresh flowers, stonework, and garden design in Kericho, Kenya.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tullips.co.ke">
-    <meta property="og:image" content="images/logo.svg">
+    <meta property="og:url" content="https://gideongeny.github.io/tullips-website/">
+    <meta property="og:image" content="images/shop-background.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Tullips Creative Green Spaces hero image with plants and greenery">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tullips Creative Green Spaces">
     <meta name="twitter:description" content="Professional landscaping & garden design in Kericho, Kenya">
-    <link rel="canonical" href="https://gideongeny.github.io/tullips-website">
+    <link rel="canonical" href="https://gideongeny.github.io/tullips-website/">
     <link rel="icon" type="image/svg+xml" href="images/logo.svg">
     <link rel="apple-touch-icon" href="images/logo.svg">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/styles.css">
+    <meta name="theme-color" content="#2e7d32">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="images/shop-background.jpg" imagesrcset="images/shop-background.jpg"/>
+    <meta name="twitter:image" content="images/shop-background.jpg">
+    <meta name="twitter:image:alt" content="Tullips Creative Green Spaces hero image with plants and greenery">
+    <script defer data-domain="gideongeny.github.io" src="https://plausible.io/js/script.js"></script>
+    <script src="https://browser.sentry-cdn.com/7.120.0/bundle.tracing.replay.min.js" crossorigin="anonymous" defer></script>
+    <script>
+    window.addEventListener('DOMContentLoaded', function(){
+      if (window.Sentry) {
+        Sentry.init({ dsn: "https://examplePublicKey@o0.ingest.sentry.io/0", tracesSampleRate: 0.1, replaysSessionSampleRate: 0.1, replaysOnErrorSampleRate: 1.0 });
+      }
+    });
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GardenStore",
+      "name": "Tullips Creative Green Spaces",
+      "image": "images/logo.svg",
+      "url": "https://gideongeny.github.io/tullips-website",
+      "telephone": "+254722801509",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kericho",
+        "addressCountry": "KE"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "sameAs": [
+        "https://instagram.com/tullips_creative_green_spaces",
+        "https://maps.app.goo.gl/fSU76hLrvTtdZEvP7"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Do you offer on-site visits and quotes?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We visit your site to assess requirements and provide a free quote in Kericho and nearby areas."}},
+        {"@type": "Question", "name": "Which services do you provide?", "acceptedAnswer": {"@type": "Answer", "text": "Fresh flowers, indoor/outdoor plants, Mazeras stone supply & tiling, garden design & landscaping."}},
+        {"@type": "Question", "name": "Do you deliver?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, we deliver within Kericho and surrounding areas."}}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Tullips Creative Green Spaces",
+      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "50"},
+      "review": [
+        {"@type": "Review", "author": {"@type": "Person", "name": "Joan Kerio"}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "Transformed our garden into a beautiful oasis."},
+        {"@type": "Review", "author": {"@type": "Person", "name": "Bii Rono"}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "Excellent service and beautiful arrangements."}
+      ]
+    }
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#home">Skip to content</a>
     <header>
         <div class="header-content">
             <div class="logo-container">
                 <img src="images/logo.svg" alt="Tullips Creative Green Spaces Logo" class="logo">
             </div>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
-            <nav id="mainNav">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">☰</button>
+            <nav id="mainNav" aria-label="Primary">
                 <a href="#home">Home</a>
                 <a href="#about">About Us</a>
                 <a href="#services">Services</a>
@@ -45,6 +113,14 @@
 
     <main>
         <section id="home" class="hero-section">
+            <div class="hero-media" aria-hidden="true">
+                <picture>
+                    <source srcset="images/shop-background.avif" type="image/avif">
+                    <source srcset="images/shop-background.webp" type="image/webp">
+                    <img src="images/shop-background.jpg" alt="" width="1920" height="1080" decoding="async" fetchpriority="high">
+                </picture>
+                <div class="hero-overlay"></div>
+            </div>
             <div class="hero-content">
                 <h1>Transform Your Space with Natural Beauty</h1>
                 <p class="hero-subtitle">Hand picked & crafted with love 🌿✨</p>
@@ -52,6 +128,7 @@
                 <div class="hero-actions">
                     <a href="#gallery" class="cta-button primary">View Our Work</a>
                     <a href="#contact" class="cta-button secondary">Get Free Quote</a>
+                    <a href="https://calendly.com/your-calendly/15min" target="_blank" rel="noopener noreferrer" class="cta-button secondary">Book a Visit</a>
                 </div>
             </div>
             <div class="hero-stats">
@@ -67,6 +144,27 @@
                     <span class="stat-number">5+</span>
                     <span class="stat-label">Years Experience</span>
                 </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq-section">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p class="section-subtitle">Answers to common questions from our clients</p>
+            </div>
+            <div class="faq-list">
+                <details>
+                    <summary>Do you offer on-site visits and quotes?</summary>
+                    <p>Yes. We offer free site visits in Kericho and nearby areas to assess your space and provide a quote.</p>
+                </details>
+                <details>
+                    <summary>Which services do you provide?</summary>
+                    <p>Fresh flowers, indoor/outdoor plants, Mazeras stone supply & tiling, and full garden design & landscaping.</p>
+                </details>
+                <details>
+                    <summary>Do you deliver?</summary>
+                    <p>Yes. We deliver within Kericho and surrounding areas. Delivery fees depend on distance and order size.</p>
+                </details>
             </div>
         </section>
 
@@ -238,10 +336,10 @@
                 </div>
                 <div class="location-map">
                     <div class="map-image-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1234567890!2d35.2831!3d-0.3677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a6bf7445dc1%3A0x79d52f3c8b9b6c8!2sTullips%20creative%20green%20spaces!5e0!3m2!1sen!2ske!4v1640995200000!5m2!1sen!2ske" width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map-image"></iframe>
+                        <iframe title="Map showing Tullips Creative Green Spaces location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1234567890!2d35.2831!3d-0.3677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a6bf7445dc1%3A0x79d52f3c8b9b6c8!2sTullips%20creative%20green%20spaces!5e0!3m2!1sen!2ske!4v1640995200000!5m2!1sen!2ske" width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map-image"></iframe>
                     </div>
                     <div class="map-actions">
-                        <a href="https://maps.app.goo.gl/fSU76hLrvTtdZEvP7?g_st=ipc" target="_blank" class="map-link">
+                        <a href="https://maps.app.goo.gl/fSU76hLrvTtdZEvP7?g_st=ipc" target="_blank" rel="noopener noreferrer" class="map-link">
                             📍 View on Google Maps
                         </a>
                     </div>
@@ -271,7 +369,7 @@
                         </svg>
                         <div>
                             <h4>WhatsApp</h4>
-                            <a href="https://wa.me/254722801509" target="_blank" class="contact-link">0722 801 509</a>
+                            <a href="https://wa.me/254722801509" target="_blank" rel="noopener noreferrer" class="contact-link">0722 801 509</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -280,7 +378,7 @@
                         </svg>
                         <div>
                             <h4>Instagram</h4>
-                            <a href="https://instagram.com/tullips_creative_green_spaces" target="_blank" class="contact-link">@tullips_creative_green_spaces</a>
+                            <a href="https://instagram.com/tullips_creative_green_spaces" target="_blank" rel="noopener noreferrer" class="contact-link">@tullips_creative_green_spaces</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -292,6 +390,35 @@
                             <p>Kericho, Kenya</p>
                         </div>
                     </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" novalidate>
+                        <input type="text" id="website" name="website" class="hp" autocomplete="off" tabindex="-1" aria-hidden="true">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required minlength="2" placeholder="Your name">
+                            <small class="error" id="nameError" aria-live="polite"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone / WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" required pattern="^[+0-9\s-]{7,}$" placeholder="e.g. 0722 801 509 or +254722801509">
+                            <small class="error" id="phoneError" aria-live="polite"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="How can we help?"></textarea>
+                            <small class="error" id="messageError" aria-live="polite"></small>
+                        </div>
+                        <div class="form-group consent">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">I agree to be contacted via WhatsApp or phone.</label>
+                            <small class="error" id="consentError" aria-live="polite"></small>
+                        </div>
+                        <button type="submit" class="service-cta" id="contactSubmit">Send via WhatsApp</button>
+                        <div class="form-alt">
+                            <a href="#" id="emailFallback" class="contact-link">Prefer email? Send email instead</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -334,7 +461,10 @@
         </div>
     </footer>
 
-    <script src="js/gallery.js"></script>
+    <a href="https://wa.me/254722801509" class="whatsapp-cta" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        💬 WhatsApp Us
+    </a>
+    <script src="js/gallery.js" defer></script>
     <script>
         // Website functionality
         document.addEventListener('DOMContentLoaded', function() {
