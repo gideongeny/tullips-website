@@ -67,6 +67,16 @@ class SimplePhotoGallery {
             const photoElement = this.createPhotoElement(photo);
             this.gallery.appendChild(photoElement);
         });
+
+        // ensure newly added lazy images become visible when loaded
+        this.gallery.querySelectorAll('img.photo-image').forEach(img => {
+            if (img.complete) {
+                img.classList.add('loaded');
+            } else {
+                img.addEventListener('load', () => img.classList.add('loaded'));
+                img.addEventListener('error', () => img.classList.add('loaded'));
+            }
+        });
         
         this.updateLoadMoreButton();
     }
