@@ -97,6 +97,10 @@ header::after {
     max-width: 100%;
 }
 
+.logo-brand {
+    filter: none !important;
+}
+
 .logo:hover {
     transform: scale(1.05);
 }
@@ -1219,6 +1223,7 @@ img.loaded { opacity: 1; }
         visibility: visible !important;
         opacity: 1 !important;
     }
+    .logo-brand { filter: none !important; }
     
     .logo-container {
         display: flex !important;
@@ -1375,6 +1380,7 @@ img.loaded { opacity: 1; }
         height: 60px !important;
         max-width: 120px !important;
     }
+    .logo-brand { filter: none !important; }
     
     .logo-container {
         min-width: 70px !important;
