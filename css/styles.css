@@ -46,6 +46,27 @@ header {
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
+/* Header shine sweep across entire header (including nav) */
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40%;
+    height: 100%;
+    width: 30%;
+    background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-20deg);
+    pointer-events: none;
+    filter: blur(2px);
+    animation: headerShine 6s ease-in-out infinite;
+}
+
+@keyframes headerShine {
+    0% { left: -40%; }
+    30% { left: 110%; }
+    100% { left: 110%; }
+}
+
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -140,7 +161,7 @@ section {
 
 /* Hero Section */
 .hero-section {
-    background: #2e7d32;
+    background: #2e7d32 url('../images/shop-background.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 6rem 2rem;
