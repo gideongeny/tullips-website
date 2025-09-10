@@ -69,6 +69,11 @@ header::after {
     100% { left: 110%; }
 }
 
+/* Disable header shine on mobile */
+@media (max-width: 768px) {
+    header::after { display: none !important; content: none !important; animation: none !important; }
+}
+
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -1213,7 +1218,7 @@ img.loaded { opacity: 1; }
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
-        filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255,255,255,0.9)) !important;
+        filter: brightness(0) invert(1) !important; /* plain white on mobile */
     }
     
     .logo-container {
