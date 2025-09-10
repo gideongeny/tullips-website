@@ -1,0 +1,30 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Tullips Creative Green Spaces Logo</title>
+  <desc id="logoDesc">Stylized tulip flower with text 'TULLIPS CREATIVE GREEN SPACES'</desc>
+  
+  <!-- Central Tulip -->
+  <g fill="currentColor">
+    <!-- Tulip bud -->
+    <path d="M150 20 L140 35 L160 35 Z" fill="currentColor"/>
+    <path d="M150 20 L145 30 L155 30 Z" fill="currentColor"/>
+    
+    <!-- Tulip stem -->
+    <rect x="148" y="35" width="4" height="40" fill="currentColor"/>
+    
+    <!-- Main leaves -->
+    <path d="M140 50 Q120 60 110 80 Q115 75 125 70 Q135 65 140 50 Z" fill="currentColor"/>
+    <path d="M160 50 Q180 60 190 80 Q185 75 175 70 Q165 65 160 50 Z" fill="currentColor"/>
+    
+    <!-- Decorative branches/wreath -->
+    <path d="M100 30 Q80 40 70 60 Q75 55 85 50 Q95 45 100 30 Z" fill="currentColor"/>
+    <path d="M200 30 Q220 40 230 60 Q225 55 215 50 Q205 45 200 30 Z" fill="currentColor"/>
+    <path d="M90 50 Q70 60 60 80 Q65 75 75 70 Q85 65 90 50 Z" fill="currentColor"/>
+    <path d="M210 50 Q230 60 240 80 Q235 75 225 70 Q215 65 210 50 Z" fill="currentColor"/>
+    <path d="M80 70 Q60 80 50 100 Q55 95 65 90 Q75 85 80 70 Z" fill="currentColor"/>
+    <path d="M220 70 Q240 80 250 100 Q245 95 235 90 Q225 85 220 70 Z" fill="currentColor"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="150" y="120" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold" fill="currentColor">TULLIPS</text>
+  <text x="150" y="145" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="normal" letter-spacing="2" fill="currentColor">CREATIVE GREEN SPACES</text>
+</svg>

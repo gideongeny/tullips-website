@@ -95,11 +95,6 @@ header::after {
     transition: transform 0.3s ease;
     display: block;
     max-width: 100%;
-    filter: brightness(0) invert(1) !important; /* force plain white */
-    -webkit-filter: brightness(0) invert(1) !important;
-    text-shadow: none !important;
-    box-shadow: none !important;
-    mix-blend-mode: normal !important;
 }
 
 .logo:hover {
@@ -1223,7 +1218,6 @@ img.loaded { opacity: 1; }
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
-        filter: brightness(0) invert(1) !important; /* plain white on mobile */
     }
     
     .logo-container {
@@ -1380,10 +1374,6 @@ img.loaded { opacity: 1; }
     .logo {
         height: 60px !important;
         max-width: 120px !important;
-        filter: brightness(0) invert(1) !important; /* ensure plain white on small screens */
-        -webkit-filter: brightness(0) invert(1) !important;
-        text-shadow: none !important;
-        box-shadow: none !important;
     }
     
     .logo-container {
