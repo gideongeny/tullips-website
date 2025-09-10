@@ -347,8 +347,8 @@
                         </div>
                     </div>
                     <div class="contact-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                            <path d="M12 2a10 10 0 1010 10V7.5a1 1 0 00-1.57-.82 4.5 4.5 0 01-2.6.82 4.5 4.5 0 01-2.5-.76V16a6.5 6.5 0 11-5.5-6.42V6.05A10 10 0 0112 2z"/>
+                        <svg class="contact-icon" viewBox="0 0 48 48" fill="currentColor" aria-hidden="true" role="img">
+                            <path d="M30.5 5.5c2.6 2.4 5.8 4 9.3 4.5v6.6c-3.1-.1-6.1-1-8.8-2.7v12.2c0 6.9-5.6 12.5-12.5 12.5S6 32.9 6 26s5.6-12.5 12.5-12.5c.8 0 1.6.1 2.4.3v6.8c-.8-.3-1.6-.4-2.4-.4-3.5 0-6.3 2.8-6.3 6.3S15 33 18.5 33s6.3-2.8 6.3-6.3V5.5h5.7z"/>
                         </svg>
                         <div>
                             <h4>TikTok</h4>
@@ -427,13 +427,15 @@
                 });
             });
             
-            // Ensure images become visible when loaded
+            // Ensure images become visible when loaded (defensive)
             document.querySelectorAll('img').forEach(img => {
-                if (img.complete) {
-                    img.classList.add('loaded');
-                } else {
-                    img.addEventListener('load', function() { this.classList.add('loaded'); });
-                    img.addEventListener('error', function() { this.classList.add('loaded'); });
+                if (!img.classList.contains('loaded')) {
+                    if (img.complete) {
+                        img.classList.add('loaded');
+                    } else {
+                        img.addEventListener('load', function() { this.classList.add('loaded'); });
+                        img.addEventListener('error', function() { this.classList.add('loaded'); });
+                    }
                 }
             });
             
