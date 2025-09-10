@@ -341,51 +341,5 @@ document.addEventListener('DOMContentLoaded', function() {
     new SimplePhotoGallery();
     new MobileMenu();
     // Contact form validation + WhatsApp deep link
-    const form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const honeypot = document.getElementById('website');
-            if (honeypot && honeypot.value) { return; } // bot detected
-            const name = document.getElementById('name');
-            const phone = document.getElementById('phone');
-            const message = document.getElementById('message');
-            const consent = document.getElementById('consent');
-
-            let valid = true;
-            const setError = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text || ''; };
-
-            if (!name.value || name.value.trim().length < 2) { setError('nameError', 'Please enter your name.'); valid = false; } else { setError('nameError'); }
-            const phoneRegex = /^[+0-9\s-]{7,}$/;
-            if (!phone.value || !phoneRegex.test(phone.value.trim())) { setError('phoneError', 'Enter a valid phone/WhatsApp number.'); valid = false; } else { setError('phoneError'); }
-            if (!message.value || message.value.trim().length < 3) { setError('messageError', 'Please enter a brief message.'); valid = false; } else { setError('messageError'); }
-            if (!consent.checked) { setError('consentError', 'Please agree to be contacted.'); valid = false; } else { setError('consentError'); }
-
-            if (!valid) return;
-
-            // Normalize phone to international format if possible (basic)
-            let raw = phone.value.replace(/\D/g, '');
-            if (raw.startsWith('0')) raw = '254' + raw.substring(1);
-            if (!raw.startsWith('254') && !raw.startsWith('1') && !raw.startsWith('2') && !raw.startsWith('44') && !raw.startsWith('+')) {
-                // leave as-is; WhatsApp will attempt to handle
-            }
-
-            const waMsg = `Hello Tullips,%0AName: ${encodeURIComponent(name.value.trim())}%0APhone: ${encodeURIComponent(phone.value.trim())}%0AMessage: ${encodeURIComponent(message.value.trim())}`;
-            const waUrl = `https://wa.me/254722801509?text=${waMsg}`;
-            window.open(waUrl, '_blank');
-        });
-
-        const emailLink = document.getElementById('emailFallback');
-        if (emailLink) {
-            emailLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                const name = document.getElementById('name').value.trim();
-                const phone = document.getElementById('phone').value.trim();
-                const message = document.getElementById('message').value.trim();
-                const subject = encodeURIComponent('New enquiry from Tullips website');
-                const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\n\nMessage:\n${message}`);
-                window.location.href = `mailto:tullips@example.com?subject=${subject}&body=${body}`;
-            });
-        }
-    }
+    // WhatsApp contact form removed per client request
 });

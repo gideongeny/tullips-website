@@ -97,7 +97,7 @@
     <header>
         <div class="header-content">
             <div class="logo-container">
-                <img src="images/logo.svg" alt="Tullips Creative Green Spaces Logo" class="logo">
+                <img src="images/logo-dark.svg" alt="Tullips Creative Green Spaces Logo" class="logo">
             </div>
             <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">☰</button>
             <nav id="mainNav" aria-label="Primary">
@@ -204,58 +204,23 @@
 
         <section id="services" class="services-section">
             <div class="section-header">
-                <h2>Our Professional Services</h2>
+                <h2>Our Services</h2>
                 <p class="section-subtitle">Comprehensive green space solutions</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🌸</div>
-                    <h3>Fresh Flowers</h3>
-                    <p>Handpicked bouquets and arrangements for all occasions</p>
-                    <ul>
-                        <li>Wedding bouquets</li>
-                        <li>Event decorations</li>
-                        <li>Gift arrangements</li>
-                        <li>Seasonal flowers</li>
-                    </ul>
-                    <a href="#contact" class="service-cta">Get Quote</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌱</div>
-                    <h3>Indoor & Outdoor Plants</h3>
-                    <p>Healthy plants for every space and environment</p>
-                    <ul>
-                        <li>Italian Cypress (1ft & 3ft)</li>
-                        <li>Palm trees</li>
-                        <li>Succulents</li>
-                        <li>Indoor plants</li>
-                    </ul>
-                    <a href="#contact" class="service-cta">Get Quote</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🪨</div>
-                    <h3>Mazeras Stone Supply & Tiling</h3>
-                    <p>Professional stonework and tiling services</p>
-                    <ul>
-                        <li>Stone supply</li>
-                        <li>Professional installation</li>
-                        <li>Custom designs</li>
-                        <li>Quality finishes</li>
-                    </ul>
-                    <a href="#contact" class="service-cta">Get Quote</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏡</div>
-                    <h3>Garden Design & Landscaping</h3>
-                    <p>Complete garden transformation services</p>
-                    <ul>
-                        <li>Garden design</li>
-                        <li>Landscaping</li>
-                        <li>Grass planting</li>
-                        <li>Maintenance</li>
-                    </ul>
-                    <a href="#contact" class="service-cta">Get Quote</a>
-                </div>
+            <div class="service-card">
+                <div class="service-icon">🌿</div>
+                <h3>What we provide</h3>
+                <ul>
+                    <li>Ornamental Plants & Seedlings</li>
+                    <li>Fibre Pots – All Shapes & Sizes</li>
+                    <li>Potted Flower Arrangements</li>
+                    <li>Clay Pots & Designer Planters</li>
+                    <li>Mazeras Supply & Cutting</li>
+                    <li>Live Wall & Vertical Garden Setup</li>
+                    <li>Indoor & Office Plant Decor</li>
+                    <li>Custom Gifting – Plants & Pots</li>
+                </ul>
+                <a href="#contact" class="service-cta">Get Quote</a>
             </div>
         </section>
 
@@ -391,35 +356,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form-wrapper">
-                    <form id="contactForm" novalidate>
-                        <input type="text" id="website" name="website" class="hp" autocomplete="off" tabindex="-1" aria-hidden="true">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required minlength="2" placeholder="Your name">
-                            <small class="error" id="nameError" aria-live="polite"></small>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone / WhatsApp</label>
-                            <input type="tel" id="phone" name="phone" required pattern="^[+0-9\s-]{7,}$" placeholder="e.g. 0722 801 509 or +254722801509">
-                            <small class="error" id="phoneError" aria-live="polite"></small>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4" required placeholder="How can we help?"></textarea>
-                            <small class="error" id="messageError" aria-live="polite"></small>
-                        </div>
-                        <div class="form-group consent">
-                            <input type="checkbox" id="consent" name="consent" required>
-                            <label for="consent">I agree to be contacted via WhatsApp or phone.</label>
-                            <small class="error" id="consentError" aria-live="polite"></small>
-                        </div>
-                        <button type="submit" class="service-cta" id="contactSubmit">Send via WhatsApp</button>
-                        <div class="form-alt">
-                            <a href="#" id="emailFallback" class="contact-link">Prefer email? Send email instead</a>
-                        </div>
-                    </form>
-                </div>
+                
             </div>
         </section>
     </main>
@@ -461,9 +398,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/254722801509" class="whatsapp-cta" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
-        💬 WhatsApp Us
-    </a>
+    
     <script src="js/gallery.js" defer></script>
     <script>
         // Website functionality
@@ -483,16 +418,14 @@
                 });
             });
             
-            // Add loading animation for images
-            const images = document.querySelectorAll('img');
-            images.forEach(img => {
-                img.addEventListener('load', function() {
-                    this.style.opacity = '1';
-                });
-                img.addEventListener('error', function() {
-                    this.style.opacity = '0.5';
-                    this.style.filter = 'grayscale(100%)';
-                });
+            // Ensure images become visible when loaded
+            document.querySelectorAll('img').forEach(img => {
+                if (img.complete) {
+                    img.classList.add('loaded');
+                } else {
+                    img.addEventListener('load', function() { this.classList.add('loaded'); });
+                    img.addEventListener('error', function() { this.classList.add('loaded'); });
+                }
             });
             
             // Add scroll-to-top functionality
